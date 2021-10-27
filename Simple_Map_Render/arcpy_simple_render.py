@@ -1,4 +1,6 @@
 # Create a map using SimpleRenderer
+# Data used is from The Railroad Commission of Texas
+# https://www.rrc.texas.gov/resource-center/research/data-sets-available-for-download/#digital-map-data-table
 
 import arcpy
 
@@ -18,7 +20,6 @@ for layer in brazos_surface_wells.listLayers():
         if hasattr(symbology, 'renderer'):
             # Check if the layers name is 'well041s'
             # 'well041s' is the name of the shapefile provided by RRC
-            # https://www.rrc.texas.gov/resource-center/research/data-sets-available-for-download/#digital-map-data-table
             # 041: Brazos county FIPS
             # s: 'Surface'
             if layer.name == "well041s":
